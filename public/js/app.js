@@ -10,7 +10,7 @@ weatherForm.addEventListener("submit", (e) => {
   forecastDescripition.innerHTML = "Loading...";
   address.innerHTML = "";
 
-  fetch(`http://localhost:3000/weather?adress=${search.value}`).then(
+  fetch(`https://node-weather.netlify.app/weather?adress=${search.value}`).then(
     (response) => {
       response.json().then((data) => {
         if (data.error) {
